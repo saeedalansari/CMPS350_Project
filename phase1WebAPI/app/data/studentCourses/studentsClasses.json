@@ -1,0 +1,30 @@
+[
+    {
+        "id": 2,
+        "classId": 2,
+        "studentId": 1,
+        "status": "registered",
+        "grade": null
+    },
+    {
+        "id": 3,
+        "classId": 1,
+        "studentId": 2,
+        "status": "registered",
+        "grade": null
+    },
+    {
+        "classId": 1,
+        "studentId": 1,
+        "status": "finalized",
+        "grade": 20,
+        "id": 4
+    },
+    {
+        "classId": 5,
+        "studentId": 1,
+        "status": "pending",
+        "grade": null,
+        "id": 5
+    }
+]

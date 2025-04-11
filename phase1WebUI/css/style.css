@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    /* margin: 20px; */
+    padding: 0;
+    background-color: #e3e6c9;
+}
+
+.page-title {
+    background-color: #203564;
+    padding: 20px;
+    /* margin-top: 50px; */
+}
+
+.page-title>h1,
+#alert_form {
+    font-family: 'Georgia', serif;
+    font-size: clamp(3rem, 5vw, 3rem);
+    color: #e3e6c9;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+
+}
+
+#alert_form {
+    color: red;
+
+}
+
+.cours-form {
+    margin-bottom: 2em;
+    padding: 1px 10px;
+    border-radius: 8px;
+    /* max-width: 150px; */
+    width: fit-content;
+    margin: auto;
+    background-color: #203564;
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #203564;
+        background-color: #e3e6c9;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .form-input {
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        label {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #e3e6c9;
+        }
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    select,
+    input[type="submit"],
+    input[type="reset"] {
+        /* width: 100%; */
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        /* Moved here for shared properties, adjust if necessary */
+        background-color: white;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        text-align: center;
+        margin: auto;
+        font-weight: bold;
+        margin-bottom: 10px;
+        border-radius: 20px;
+    }
+
+    .form-btns {
+        display: flex;
+    }
+
+    input[type="reset"] {
+        color: red;
+        /* flex: 1; */
+    }
+
+    input[type="submit"] {
+        color: green;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    select {
+        color: black;
+    }
+}
+
+.cours-search {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin: auto;
+
+    input {
+        padding: 15px 32px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        width: 100%;
+    }
+}
+
+
+
+#Description-data {
+    overflow: auto;
+}
+
+.add-btn,
+.delete-btn,
+.update-btn {
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+.add-btn {
+    background-color: #203564;
+    color: white;
+    float: right;
+}
+
+
+
+.delete-btn:hover {
+    background-color: #e60000;
+}
+
+.update-btn {
+    background-color: #4CAF50;
+}
+
+.update-btn:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+.cours-list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1rem;
+
+    .card {
+        background-color: #203564;
+        padding: 20px;
+        text-align: center;
+        margin: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        border-radius: 5px;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+
+        img {
+            width: 100%;
+            flex: 1;
+            border-radius: 20px;
+        }
+
+        p {
+            width: 100%;
+            text-align: justify;
+            color: #e3e6c9;
+            font-size: 20px;
+            span {
+                font-weight: bold;
+            }
+        }
+
+        .add-btn {
+            background-color: white;
+            color: #203564;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .update-btn {
+            color: #4CAF50;
+            background-color: white;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        
+        .delete-btn {
+            color: #ff4d4d;
+            background-color: white;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+    }
+
+    .card:hover {
+        box-shadow: 0 28px 36px 0 rgba(88, 11, 11, 0.2);
+    }
+}
+
+
+
+
+
+.input_grade {
+    background-color: white;
+    padding: 3px;
+    width: 90%;
+    display: block;
+    color: black;
+    color: #45a049;
+    background-color: white;
+}
+
+.update-btn:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+
+
+.title-form{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #203564;
+}
