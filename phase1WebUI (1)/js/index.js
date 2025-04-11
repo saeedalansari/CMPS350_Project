@@ -335,7 +335,7 @@ class MainPage {
     const data = await request.json();
     return data;
   }
-  static CardMaterial(Class) {
+  static CardMaterialStudent(Class) {
     if (!Class.studentClasse) {
       return `
         <div class="card">
@@ -393,7 +393,7 @@ class MainPage {
     const cours_list = document.querySelector("#cours-list");
     cours_list.innerHTML = (await MainPage.getClasses()).data
       .map((Class) =>
-        MainPage.CardMaterial(
+        MainPage.CardMaterialStudent(
           Class,
           `
           <div class="btns">
@@ -413,39 +413,39 @@ class MainPage {
   static async cardsInstructor() {
     const cours_list = document.querySelector("#cours-list");
     cours_list.innerHTML = (await MainPage.getClasses()).data
-      .map((Class) =>
-        MainPage.CardMaterial(
-          Class,
-          `
-          <p><span>number of registered</span> : ${Class.numberRegistered}</p>
-          <p><span>number of Finalized</span> : ${Class.numberFinalized}</p>
-          <div class="btns">
-            <button class="update-btn" onclick="EnterGrades.ShowRegistered(${Class.id})">enter grades</button>
+      .map(
+        (Class) => `
+          <div class="card">
+            <img src="img/material.png" alt="${Class.name}"/>
+            <p><span>number of registered</span> : ${Class.numberRegistered}</p>
+            <p><span>number of Finalized</span> : ${Class.numberFinalized}</p>
+            <div class="btns">
+              <button class="update-btn" onclick="EnterGrades.ShowRegistered(${Class.id})">enter grades</button>
+            </div>
           </div>
         `
-        )
       )
       .join("");
   }
   static async cardsAdministrators() {
     const cours_list = document.querySelector("#cours-list");
     cours_list.innerHTML = (await MainPage.getClasses()).data
-      .map((Class) =>
-        MainPage.CardMaterial(
-          Class,
-          `
-          <p><span>number of pending</span> : ${Class.numberPending}</p>
-          <p><span>number of registered</span> : ${Class.numberRegistered}</p>
-          <p><span>number of Finalized</span> : ${Class.numberFinalized}</p>
-          ${
-            Class.numberPending
-              ? `<div class="btns">
-            <button class="update-btn" onclick="AcceptPending.ShowAcceptPending(${Class.id})">accept pending</button>
-          </div>`
-              : ""
-          }
+      .map(
+        (Class) => `
+          <div class="card">
+            <img src="img/material.png" alt="${Class.name}"/>
+            <p><span>number of pending</span> : ${Class.numberPending}</p>
+            <p><span>number of registered</span> : ${Class.numberRegistered}</p>
+            <p><span>number of Finalized</span> : ${Class.numberFinalized}</p>
+            ${
+              Class.numberPending
+                ? `<div class="btns">
+              <button class="update-btn" onclick="AcceptPending.ShowAcceptPending(${Class.id})">accept pending</button>
+            </div>`
+                : ""
+            }
+          </div>
         `
-        )
       )
       .join("");
   }
